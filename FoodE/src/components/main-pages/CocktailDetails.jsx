@@ -10,41 +10,8 @@ import DataContext from '../../DataContext'
 export default function CocktailDetails () {
     const { cocktailDetailData, setCocktailDetailData, isRandomCocktail, setIsRandomCocktail } = useContext(DataContext)
 
-    // const getRandom = async () => {
-    //     const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
-    //     console.log("response", response.data.drinks[0])
-    //     setCocktailDetailData(response.data.drinks[0])
-    //     // console.log("usestate", cocktailDetailData)
-    // }
-
     const parseCocktailDetailData = () => {
-        
-        // const parseRecipe = () => {
-        //     console.log('parseRecipe running')
-        //     let divs
-        //     for (let i=1; i<=15; i++) {
-        //         // console.log(i)
-        //         // const ingr = strIngredient[i]
-        //         // const meas = strMeasure[i]
-                
-        //         cocktailDetailData.{`strMeasure${i}`} ? divs +=
-        //             <div>{cocktailDetailData.strMeasure[i]} <span className='detail-bold'>{cocktailDetailData.strIngredient[i]}</span></div>
-        //         : null 
-                
-        //     }
-
-
-
-
-        //     const ingr = `strIngredient1`
-        //     const meas = `strMeasure1`
-
-        //     return (
-        //         // divs
-        //         <div>{cocktailDetailData.${meas}} <span className='detail-bold'>{cocktailDetailData.${ingr}}</span></div>
-        //     )
-        // }
-
+    
         console.log("cocktailDetailData", cocktailDetailData)
         const data = cocktailDetailData
 

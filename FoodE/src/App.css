@@ -7,7 +7,7 @@
 
 body {
   background-color: #111;
-  background: url(/Users/ahunter/Desktop/GA/Unit3/Week8/Tuesday/AnthonyAnthonySammyFood/FoodE/src/assets/MainDrink.jpeg) no-repeat center;
+  /* background: url("./assets/MainDrink.jpeg") no-repeat center; */
   color: #fff;
   font-family: arial, sans-serif;
   line-height: 1.6;
