@@ -13,7 +13,6 @@ import IngredientDetails from './main-pages/IngredientDetails'
 export default function Main () {
     return (
         <div className="Main">
-            <h4>Main</h4>
             <div className='routes-container'>
                 <Routes>
                     <Route path="/" element={<Home/>} />
