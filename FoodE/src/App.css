@@ -79,3 +79,24 @@ footer {
   text-decoration: none;
   margin: 0 10px;
 }
+
+.detail-title {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.detail-image {
+  max-width: 300px;
+  border: #888 1px solid;
+  box-shadow: 3px 3px 3px grey;
+}
+
+
+.detail-bold {
+  font-weight: bolder;
+}
+
+.detail-glass, .detail-instructions, .detail-recipe {
+  text-align: left;
+
+}
