@@ -5,9 +5,11 @@ import DataContext from '../../DataContext';
 import { NAME_BASE_URL } from '../../../globals';
 
 export default function CocktailsData() {
-  const { cocktailDetailData, setCocktailDetailData, searchResultsData, setSearchResultsData } = useContext(DataContext);
+  
+  const { cocktailDetailData, setCocktailDetailData, searchResultsData, setSearchResultsData, searchDisplay, setSearchDisplay } = useContext(DataContext);
+  const navigate = useNavigate();
 
-  const [cocktailName, setCocktailName] = useState('');
+  const [searchName, setSearchName] = useState('');
 
   const GetCocktailbyName = async (name) => {
     try {
@@ -19,14 +21,21 @@ export default function CocktailsData() {
     }
   }
 
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (cocktailName) {
-      GetCocktailbyName(cocktailName);
-      // navigate('/cocktaildetails');
+    if (searchName) {
+      setSearchDisplay(searchName)
+      GetCocktailbyName(searchName);
     }
+  }
+
+  const goToGridItem = (index) => {
+    // console.log("searchResultsData", searchResultsData)
+    setCocktailDetailData(searchResultsData.drinks[index])
+    // console.log("cocktailDetailData", cocktailDetailData)
+    navigate('/cocktaildetails');
+
   }
 
   return (
@@ -36,8 +45,8 @@ export default function CocktailsData() {
         <input
           className='search-input'
           type="text"
-          value={cocktailName}
-          onChange={(e) => setCocktailName(e.target.value)}
+          value={searchName}
+          onChange={(e) => setSearchName(e.target.value)}
           placeholder="Enter cocktail name"
         />
         <button className="search-submit-button" type="submit">Submit</button>
@@ -45,10 +54,10 @@ export default function CocktailsData() {
       <div className="search-results-container">
         {searchResultsData.drinks && searchResultsData.drinks.length > 0 ? (
           <div className='search-results'>
-            <div className='search-results-query'> Showing results for {cocktailName}</div>
+            <div className='search-results-query'> Showing results for "{searchDisplay}"</div>
             <div className='search-results-grid'>
-              {searchResultsData.drinks.map((drink) => (
-                <div className='search-results-grid-item' key={drink.idDrink}>
+              {searchResultsData.drinks.map((drink, index) => (
+                <div className='search-results-grid-item' key={drink.idDrink} onClick={() => goToGridItem(index)}>
                     <img className='detail-image' src={drink.strDrinkThumb}></img>
                     <h2 >{drink.strDrink}</h2>
                 </div>
@@ -56,7 +65,8 @@ export default function CocktailsData() {
             </div>
           </div>
         ) : (
-          <h2>Loading Cocktails - REPLACE THIS EVENTUALLY</h2>
+          // <h2>Loading Cocktails - REPLACE THIS EVENTUALLY</h2>
+          null
         )}
       </div>
     </div>

@@ -14,6 +14,8 @@ function App() {
   const [cocktailDetailData, setCocktailDetailData] = useState({})
   const [searchResultsData, setSearchResultsData] = useState([{}])
   const [isRandomCocktail, setIsRandomCocktail] = useState(false)
+  const [searchDisplay, setSearchDisplay] = useState('')
+
 
   //const response = API Call for search
   //setSearchResultsData(response.data)
@@ -24,7 +26,8 @@ function App() {
       <DataContext.Provider value={{
         cocktailDetailData, setCocktailDetailData,
         searchResultsData, setSearchResultsData,
-        isRandomCocktail, setIsRandomCocktail
+        isRandomCocktail, setIsRandomCocktail,
+        searchDisplay, setSearchDisplay
       }}>
         <Header />
         <Main />
