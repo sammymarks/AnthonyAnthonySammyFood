@@ -51,7 +51,6 @@ export default function CocktailsData() {
         />
         <button className="search-submit-button" type="submit">Submit</button>
       </form>
-
       <div className="search-results-container">
         {searchResultsData.drinks && searchResultsData.drinks.length > 0 ? (
           <div className='search-results'>
@@ -59,6 +58,7 @@ export default function CocktailsData() {
             <div className='search-results-grid'>
               {searchResultsData.drinks.map((drink, index) => (
                 <div className='search-results-grid-item' key={drink.idDrink} onClick={() => goToGridItem(index)}>
+                    <img className='detail-image' src={drink.strDrinkThumb}></img>
                     <h2 >{drink.strDrink}</h2>
                 </div>
               ))}
