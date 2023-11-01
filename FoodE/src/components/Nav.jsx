@@ -12,11 +12,8 @@ export default function Nav () {
 
 
     const getRandom = async () => {
-        console.log("getRandom is running")
         const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
-        console.log("response", response.data.drinks[0])
         setCocktailDetailData(response.data.drinks[0])
-        // console.log("usestate", cocktailDetailData)
     }
     
     return(
