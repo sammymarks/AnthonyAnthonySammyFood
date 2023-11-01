@@ -8,8 +8,9 @@ export default function Nav () {
     return(
         <div className="Nav">
             <Link className="Nav-link" to="/"><div>Home</div></Link>
-            <Link className="Nav-link" to="/cocktails"><div>Cocktails</div></Link>
-            <Link className="Nav-link" to="/random"><div>Random Cocktail</div></Link>
+            <Link className="Nav-link" to="/cocktailsearch"><div>Search Cocktails</div></Link>
+            {/* <button classname="Nav-link"> </button> */}
+            {/* <Link className="Nav-link" to="/cocktaildetails"><div>Cocktails Details</div></Link> */}
         </div>
     )
 }
