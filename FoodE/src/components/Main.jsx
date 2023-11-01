@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate, Routes, Route } from "react-router-dom"
 import axios from 'axios'
 
 import Home from './main-pages/Home'
-import Cocktails from './main-pages/Cocktails'
+import CocktailSearch from './main-pages/CocktailSearch'
 import CocktailsByCategory from './main-pages/CocktailsbyCategory'
 import CocktailDetails from './main-pages/CocktailDetails'
 import Ingredients from './main-pages/Ingredients'
@@ -17,11 +17,11 @@ export default function Main () {
             <div className='routes-container'>
                 <Routes>
                     <Route path="/" element={<Home/>} />
-                    <Route path="/cocktails" element={<Cocktails/>} />
-                    <Route path="/cocktails/:category" element={<CocktailsByCategory />} />
-                    <Route path="/cocktails/:id" element={<CocktailDetails />} />
+                    <Route path="/cocktailsearch" element={<CocktailSearch/>} />
+                    <Route path="/cocktaildetails" element={<CocktailDetails/>} />
+                    {/* <Route path="/cocktails/:category" element={<CocktailsByCategory />} />
                     <Route path="/ingredients" element={<Ingredients/>} />
-                    <Route path="/ingredients/:id" element={<IngredientDetails />} />
+                    <Route path="/ingredients/:name" element={<IngredientDetails />} /> */}
                 </Routes>
             </div>
         </div>
