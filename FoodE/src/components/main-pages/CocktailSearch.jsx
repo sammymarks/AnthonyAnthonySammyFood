@@ -50,6 +50,7 @@ export default function CocktailsData() {
             <div className='search-results-grid'>
               {searchResultsData.drinks.map((drink) => (
                 <div className='search-results-grid-item' key={drink.idDrink}>
+                    <img className='detail-image' src={drink.strDrinkThumb}></img>
                     <h2 >{drink.strDrink}</h2>
                 </div>
               ))}
