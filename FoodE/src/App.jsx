@@ -15,6 +15,9 @@ function App() {
   const [searchResultsData, setSearchResultsData] = useState([{}])
   const [isRandomCocktail, setIsRandomCocktail] = useState(false)
 
+  //const response = API Call for search
+  //setSearchResultsData(response.data)
+  //console.log(searchResultsData) ==> This will be the array of cocktails that returned from the search
 
   return (
     <div className='App'>

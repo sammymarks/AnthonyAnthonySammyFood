@@ -4,11 +4,15 @@ import { Link, useParams, useNavigate } from "react-router-dom"
 import axios from 'axios'
 
 import DataContext from '../DataContext'
-const { cocktailDetailData, setCocktailDetailData } = useContext(DataContext)
 
-//INSERT Function for Randon Cocktail API call when Random is clicked
 
 export default function Nav () {
+
+    const { cocktailDetailData, setCocktailDetailData } = useContext(DataContext)
+
+    //INSERT Function for Randon Cocktail API call when Random is clicked
+
+
     return(
         <div className="Nav">
             <Link className="Nav-link" to="/"><div>Home</div></Link>
