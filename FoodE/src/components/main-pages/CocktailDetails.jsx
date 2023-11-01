@@ -8,14 +8,14 @@ import DataContext from '../../DataContext'
 
 
 export default function CocktailDetails () {
-    const { cocktailDetailData, setCocktailDetailData } = useContext(DataContext)
+    const { cocktailDetailData, setCocktailDetailData, isRandomCocktail, setIsRandomCocktail } = useContext(DataContext)
 
-    const getRandom = async () => {
-        const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
-        console.log("response", response.data.drinks[0])
-        setCocktailDetailData(response.data.drinks[0])
-        // console.log("usestate", cocktailDetailData)
-    }
+    // const getRandom = async () => {
+    //     const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
+    //     console.log("response", response.data.drinks[0])
+    //     setCocktailDetailData(response.data.drinks[0])
+    //     // console.log("usestate", cocktailDetailData)
+    // }
 
     const parseCocktailDetailData = () => {
         
@@ -23,15 +23,17 @@ export default function CocktailDetails () {
         //     console.log('parseRecipe running')
         //     let divs
         //     for (let i=1; i<=15; i++) {
-        //         console.log(i)
-        //         const ingr = `strIngredient${i}`
-        //         const meas = `strMeasure${i}`
+        //         // console.log(i)
+        //         // const ingr = strIngredient[i]
+        //         // const meas = strMeasure[i]
                 
-        //         ingr ? divs +=
-        //             <div>{cocktailDetailData.meas} <span className='detail-bold'>{cocktailDetailData.ingr}</span></div>
+        //         cocktailDetailData.{`strMeasure${i}`} ? divs +=
+        //             <div>{cocktailDetailData.strMeasure[i]} <span className='detail-bold'>{cocktailDetailData.strIngredient[i]}</span></div>
         //         : null 
                 
         //     }
+
+
 
 
         //     const ingr = `strIngredient1`
@@ -43,7 +45,7 @@ export default function CocktailDetails () {
         //     )
         // }
 
-        
+        console.log("cocktailDetailData", cocktailDetailData)
         const data = cocktailDetailData
 
         const title = data.strDrink
@@ -78,6 +80,7 @@ export default function CocktailDetails () {
                     {data.strMeasure13 ? <li>{cocktailDetailData.strMeasure13} <span className='detail-bold'>{cocktailDetailData.strIngredient13}</span></li> : null}
                     {data.strMeasure14 ? <li>{cocktailDetailData.strMeasure14} <span className='detail-bold'>{cocktailDetailData.strIngredient14}</span></li> : null}
                     {data.strMeasure15 ? <li>{cocktailDetailData.strMeasure15} <span className='detail-bold'>{cocktailDetailData.strIngredient15}</span></li> : null}
+                    {/* {parseRecipe()} */}
                 </ul>
             </div>
         )
@@ -85,7 +88,10 @@ export default function CocktailDetails () {
     }
     
     useEffect(() => {
-        getRandom()
+        if (isRandomCocktail) {
+            // getRandom()
+            setIsRandomCocktail(false)
+        }
         // console.log("usestate", cocktailDetailData)
     }, [])
 
