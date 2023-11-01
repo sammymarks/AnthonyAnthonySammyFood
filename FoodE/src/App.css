@@ -7,49 +7,75 @@
 
 body {
   background-color: #111;
+  background: url(/Users/ahunter/Desktop/GA/Unit3/Week8/Tuesday/AnthonyAnthonySammyFood/FoodE/src/assets/MainDrink.jpeg) no-repeat center;
   color: #fff;
   font-family: arial, sans-serif;
   line-height: 1.6;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 header {
-  background-color: #000;
+  background-color: #333;
+  color: #fff;
   padding: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.logo img {
+  width: 100px;
+  height: 100px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+section {
+  padding: 40px;
 }
 
-.card {
-  padding: 2em;
+h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.read-the-docs {
-  color: #888;
+h5 {
+
+}
+
+.cocktail {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.cocktail img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.social-media a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
 }

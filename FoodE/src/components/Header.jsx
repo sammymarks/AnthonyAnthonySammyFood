@@ -7,9 +7,9 @@ import Nav from './Nav'
 export default function Header () {
     return (
         <div className="Header">
-            <h4>Header</h4>
+            <h4>Cocktail Connoisseurs</h4>
             <h5>Search Bar</h5>
-            <h5>NavBar</h5>
+            <h6>NavBar</h6>
             <Nav />
         </div>
     )
