@@ -42,7 +42,6 @@ export default function CocktailsData() {
         />
         <button className="search-submit-button" type="submit">Submit</button>
       </form>
-
       <div className="search-results-container">
         {searchResultsData.drinks && searchResultsData.drinks.length > 0 ? (
           <div className='search-results'>
