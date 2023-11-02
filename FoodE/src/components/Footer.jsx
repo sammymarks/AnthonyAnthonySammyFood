@@ -4,8 +4,12 @@ import axios from 'axios'
 
 export default function Footer () {
     return (
-        <div className="Footer">
-            <h4>Footer</h4>
-        </div>
+        <footer>
+            <div className="Footer">
+            <h4></h4>
+            </div>
+            <p>&copy; 2023 Cocktail Connoisseurs </p>
+        </footer>
+
     )
 }   
