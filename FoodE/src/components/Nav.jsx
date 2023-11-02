@@ -8,17 +8,19 @@ import DataContext from '../DataContext'
 
 export default function Nav () {
 
-    const { cocktailDetailData, setCocktailDetailData } = useContext(DataContext)
-
-    //INSERT Function for Randon Cocktail API call when Random is clicked
+    const { cocktailDetailData, setCocktailDetailData, isRandomCocktail, setIsRandomCocktail } = useContext(DataContext)
 
 
+    const getRandom = async () => {
+        const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
+        setCocktailDetailData(response.data.drinks[0])
+    }
+    
     return(
         <div className="Nav">
             <Link className="Nav-link" to="/"><div>Home</div></Link>
             <Link className="Nav-link" to="/cocktailsearch"><div>Search Cocktails</div></Link>
-            {/* <button classname="Nav-link"> </button> */}
-            {/* <Link className="Nav-link" to="/cocktaildetails"><div>Cocktails Details</div></Link> */}
+            <Link className="Nav-link" onClick={() => getRandom()} to="/cocktaildetails"><div>Random Cocktail</div></Link>
         </div>
     )
 }
