@@ -31,11 +31,8 @@ export default function CocktailsData() {
   }
 
   const goToGridItem = (index) => {
-    // console.log("searchResultsData", searchResultsData)
     setCocktailDetailData(searchResultsData.drinks[index])
-    // console.log("cocktailDetailData", cocktailDetailData)
     navigate('/cocktaildetails');
-
   }
 
   return (
