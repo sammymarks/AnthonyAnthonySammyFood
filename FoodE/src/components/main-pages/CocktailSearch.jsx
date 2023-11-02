@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import DataContext from '../../DataContext';
-import { NAME_BASE_URL } from '../../../globals';
+import React, { useState, useEffect, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import DataContext from '../../DataContext'
+import { NAME_BASE_URL } from '../../../globals'
+import '../../CocktailSearch.css' 
 
 export default function CocktailsData() {
   
@@ -37,7 +38,7 @@ export default function CocktailsData() {
 
   return (
     <div className="Cocktails">
-      <h1 className="title">Cocktail Search Index</h1>
+      <h2 className="title">Cocktail Search Index</h2>
       <form onSubmit={handleSubmit}>
         <input
           className='search-input'
@@ -56,7 +57,7 @@ export default function CocktailsData() {
               {searchResultsData.drinks.map((drink, index) => (
                 <div className='search-results-grid-item' key={drink.idDrink} onClick={() => goToGridItem(index)}>
                     <img className='detail-image' src={drink.strDrinkThumb}></img>
-                    <h2 >{drink.strDrink}</h2>
+                    <h2 ClassName='drink-name'>{drink.strDrink}</h2>
                 </div>
               ))}
             </div>
