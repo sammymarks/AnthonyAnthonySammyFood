@@ -223,8 +223,8 @@ margin: 10px 10px 10px 10px;
 /* .search-results-grid{
 
 } */
-.search-results-grid-item{
-  background-color: #333;
+.search-results-grid-item, .detail-container{
+  background-color: #333333bc;
   padding: 15px; /* Adjust the padding to increase the size of #333 card */
   margin-bottom: 25px;
   border-radius: 10px;
