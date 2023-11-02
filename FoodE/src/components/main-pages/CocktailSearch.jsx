@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import DataContext from '../../DataContext'
-import { NAME_BASE_URL, INGREDIENT_FILTER_URL } from '../../../globals'
+import { NAME_BASE_URL, INGREDIENT_FILTER_URL, INGREDIENT_ID_BASE_URL } from '../../../globals'
 import '../../App.css' 
 
 
@@ -52,11 +52,22 @@ export default function CocktailsData() {
   }
 
 
+  const cocktailDetailsByID = async (id) => {
+    try {
+      const response = await axios.get(`${INGREDIENT_ID_BASE_URL}${id}`);
+      console.log("ID Response", id, response)
+      setCocktailDetailData(response.data)
+    //  setCocktailDetailData(searchResultsData.drinks[index])
 
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
 
 
   const goToGridItem = (index) => {
     setCocktailDetailData(searchResultsData.drinks[index])
+    // cocktailDetailsByID(searchResultsData.drinks[index].idDrink)
     navigate('/cocktaildetails');
   }
 

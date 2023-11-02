@@ -47,7 +47,7 @@ section {
   margin-left: auto;
 } */
 
-h7 {
+.Home>div {
   font-size: 2rem;
   font-weight: bold;
   font-family: cursive;
@@ -122,35 +122,21 @@ h7 {
   
   background-color: rgba(0, 0, 0, 0);
   color: #fff;
-  /* padding: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* max-height: 100px; */
-  /* width: 100%; */
-  /* top: 0;
-  left: 0; */
-  /* position: fixed; */
-    font-size: 2.0em;
-    font-family: cursive;
-
+  font-size: 2.0em;
+  font-family: cursive;
+  margin-bottom: 5px;
 
   }
 
 
-/* header {
-  padding: 20px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
-} */
-
 .Header>h4 {
   font-weight: bold;
   margin: 0;
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-family: cursive;
 }
 .Nav {
@@ -163,12 +149,14 @@ h7 {
   background-color: #1111113e;
   padding: 0 2px 0 2px;
   color: #ccc;
+  margin-bottom: 5px;
 }
 
 .Main {
   grid-area: Main;
-  /* background-color: blue; */
+  background-color: #333333bc;
   overflow: scroll;
+  padding: 5px;
 }
 
 .Cocktails {
