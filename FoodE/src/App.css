@@ -13,8 +13,10 @@ body {
   line-height: 1.6;
   background-size: cover;
   background-attachment: fixed;
-  /* margin: 0;
-  padding: 0; */
+  margin: 0;
+  padding: 0;
+  
+  
 }
 
 
@@ -45,6 +47,12 @@ section {
   margin-left: auto;
 } */
 
+h7 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: cursive;
+}
+
 .cocktail {
   display: flex;
   align-items: center;
@@ -56,8 +64,6 @@ section {
   height: 100px;
   margin-right: 20px;
 }
-
-
 
 .contact-info p {
   margin: 0;
@@ -106,6 +112,14 @@ section {
 }
 
 .Header {
+  grid-area: Header;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  
+  
   background-color: rgba(0, 0, 0, 0);
   color: #fff;
   /* padding: 20px; */
@@ -118,22 +132,26 @@ section {
   /* top: 0;
   left: 0; */
   /* position: fixed; */
+    font-size: 2.0em;
+    font-family: cursive;
+
+
   }
 
-.Header {
-  grid-area: Header;
-  /* background-color: yellow; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
-}
+
+/* header {
+  padding: 20px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+} */
 
 .Header>h4 {
-  font-size: 1.5rem;
   font-weight: bold;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0;
+  font-size: 3rem;
+  font-family: cursive;
 }
 .Nav {
   display: flex;
@@ -160,20 +178,24 @@ section {
 
 
 .Footer {
+  grid-area: Footer;
+
+  
   /* background-color: #333; */
   color: #fff;
   /* padding: 20px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+
+  position: absolute;
+  bottom: 0;
 }
 
 .Footer {
-  grid-area: Footer;
-  background-color: green;
+/*   background-color: green; */
 }
-
-
 
 
 
