@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import DataContext from '../../DataContext'
 import { NAME_BASE_URL } from '../../../globals'
-import '../../CocktailSearch.css' 
+import '../../App.css' 
+
 
 export default function CocktailsData() {
   

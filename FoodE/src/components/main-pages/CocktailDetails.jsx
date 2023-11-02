@@ -71,7 +71,7 @@ export default function CocktailDetails () {
 
     return (
         <div className="CocktailDetails">
-            <h4>CocktailDetails</h4>
+            {/* <h4>CocktailDetails</h4> */}
             {parseCocktailDetailData()}
         </div>
     )
