@@ -7,28 +7,34 @@
 
 body {
   background-color: #111;
-  background: url(/Users/ahunter/Desktop/GA/Unit3/Week8/Tuesday/AnthonyAnthonySammyFood/FoodE/src/assets/MainDrink.jpeg) no-repeat center;
+  background: url(src/assets/bartender-blueFlame.webp) no-repeat center;
   color: #fff;
   font-family: arial, sans-serif;
   line-height: 1.6;
   background-size: cover;
   background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0);
   color: #fff;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  }
 
 .logo img {
   width: 100px;
   height: 100px;
 }
-
+/*
 nav a {
   color: #fff;
   text-decoration: none;
@@ -39,14 +45,19 @@ section {
   padding: 40px;
 }
 
+/* Cocktail Connoisseurs */
 h4 {
   font-size: 2rem;
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-h5 {
-
+/* Nav Bar */
+h6 {
+  flex: 1;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: auto;
 }
 
 .cocktail {
