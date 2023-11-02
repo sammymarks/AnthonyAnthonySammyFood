@@ -4,7 +4,6 @@ import axios from 'axios'
 
 import Home from './main-pages/Home'
 import CocktailSearch from './main-pages/CocktailSearch'
-import CocktailsByCategory from './main-pages/CocktailsbyCategory'
 import CocktailDetails from './main-pages/CocktailDetails'
 import Ingredients from './main-pages/Ingredients'
 import IngredientDetails from './main-pages/IngredientDetails'
